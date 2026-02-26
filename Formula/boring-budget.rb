@@ -5,22 +5,22 @@
 class BoringBudget < Formula
   desc "Local-first budgeting CLI with deterministic JSON contracts"
   homepage "https://github.com/guseducampos/boring-budget"
-  version "0.1.2"
+  version "0.1.3"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/guseducampos/boring-budget/releases/download/v0.1.2/boring-budget_0.1.2_darwin_amd64.tar.gz"
-      sha256 "325e18dbf42ab79794f89c607648ea5ce18d7cc320310f4ccc9c530ad82b5207"
+      url "https://github.com/guseducampos/boring-budget/releases/download/v0.1.3/boring-budget_0.1.3_darwin_amd64.tar.gz"
+      sha256 "9e5c6b35003816ed7f22f46293caa269dcb294f15323354e9fdd8eb7a81f8fc2"
 
-      def install
+      define_method(:install) do
         bin.install "boring-budget"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/guseducampos/boring-budget/releases/download/v0.1.2/boring-budget_0.1.2_darwin_arm64.tar.gz"
-      sha256 "07a9b34236e6f6b2d00811583b2d5ee979171fc44e25d23574ee1391d1ad768a"
+      url "https://github.com/guseducampos/boring-budget/releases/download/v0.1.3/boring-budget_0.1.3_darwin_arm64.tar.gz"
+      sha256 "244379bb3c09aec39738499a8b2f57b16941fda85fe3fa3b11c90923f511c497"
 
-      def install
+      define_method(:install) do
         bin.install "boring-budget"
       end
     end
@@ -28,16 +28,16 @@ class BoringBudget < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/guseducampos/boring-budget/releases/download/v0.1.2/boring-budget_0.1.2_linux_amd64.tar.gz"
-      sha256 "7795da1a50c9a7c59e8f70c08875f44be3e4c2731765599eb8096de38a8db7ff"
-      def install
+      url "https://github.com/guseducampos/boring-budget/releases/download/v0.1.3/boring-budget_0.1.3_linux_amd64.tar.gz"
+      sha256 "6fb3ebac8712d7744a009eba5e9526d4341516400230216fd5da3c87c8946cf1"
+      define_method(:install) do
         bin.install "boring-budget"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/guseducampos/boring-budget/releases/download/v0.1.2/boring-budget_0.1.2_linux_arm64.tar.gz"
-      sha256 "4e88055db11efa576967b52064c7d7a25d0a471c3e0fbf05272dff740204827c"
-      def install
+      url "https://github.com/guseducampos/boring-budget/releases/download/v0.1.3/boring-budget_0.1.3_linux_arm64.tar.gz"
+      sha256 "58ccd413814921a9439afc30f5fad4590910948d9cb2f398ac9f846401392fac"
+      define_method(:install) do
         bin.install "boring-budget"
       end
     end
